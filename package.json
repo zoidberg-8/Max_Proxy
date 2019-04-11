@@ -1,0 +1,27 @@
+{
+  "name": "max_proxy",
+  "version": "1.0.0",
+  "description": "Frontend Capstone HRR37 Proxy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoidberg-8/Max_Proxy.git"
+  },
+  "author": "Max Hsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoidberg-8/Max_Proxy/issues"
+  },
+  "homepage": "https://github.com/zoidberg-8/Max_Proxy#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "http-proxy-middleware": "^0.19.1",
+    "multer": "^1.4.1",
+    "proxy-middleware": "^0.15.0"
+  }
+}
