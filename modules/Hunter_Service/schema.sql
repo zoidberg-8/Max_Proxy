@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS nike;
+DROP DATABASE IF EXISTS nikesugg;
 
-CREATE DATABASE nike;
+CREATE DATABASE nikesugg;
 
-USE nike;
+USE nikesugg;
 
 CREATE TABLE suggestions (
   id int NOT NULL AUTO_INCREMENT,
