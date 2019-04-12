@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 const connection = mysql.createConnection({
   user: "root",
-  database: "nike"
+  database: "nikesugg"
 });
 
 var getSuggestions = function(callback) {
