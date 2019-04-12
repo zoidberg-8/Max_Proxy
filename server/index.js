@@ -22,10 +22,16 @@ app.use(
   proxy({ target: 'http://localhost:3002', changeOrigin: true })
 );
 
-//Hunters service - Suggestions
+//Hunters's service - Suggestions
 app.use(
   '/shoes/:id/suggestions',
   proxy({ target: 'http://localhost:3003', changeOrigin: true })
+);
+
+//Hunter's service - Description
+app.use(
+  '/shoes/:id/description',
+  proxy({ target: 'http://localhost:3004', changeOrigin: true })
 );
 
 
