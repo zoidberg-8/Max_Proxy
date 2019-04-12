@@ -22,10 +22,10 @@ app.use(
   proxy({ target: 'http://localhost:3002', changeOrigin: true })
 );
 
-//Hunters service - desc
+//Hunters service - Suggestions
 app.use(
-  '/shoes/:id/desc',
-  proxy({ target: 'http://localhost:4000', changeOrigin: true })
+  '/shoes/:id/suggestions',
+  proxy({ target: 'http://localhost:3003', changeOrigin: true })
 );
 
 
