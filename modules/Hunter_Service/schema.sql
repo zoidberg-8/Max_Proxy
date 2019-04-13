@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS nike;
+
+CREATE DATABASE nike;
+
+USE nike;

@@ -1,0 +1,53 @@
+{
+  "name": "Hunter_Service",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Hunter",
+  "license": "ISC",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "build": "webpack -d --watch",
+    "run": "nodemon server/index.js",
+    "seed": "mysql -u root < schema.sql && node seedDb.js",
+    "test": "jest --watchAll"
+  },
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "babel-jest": "^24.7.1",
+    "css-loader": "^2.1.1",
+    "express": "^4.16.4",
+    "style-loader": "^0.23.1",
+    "webpack-combine-loaders": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "body-parser": "^1.18.3",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.5",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "faker": "^4.1.0",
+    "jest": "^24.7.1",
+    "jest-enzyme": "^7.0.2",
+    "mysql": "^2.16.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-modal": "^3.8.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "jest": {
+    "verbose": true,
+    "setupTestFrameworkScriptFile": "<rootDir>__tests__/setup/setupEnzyme.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/__tests__/setup/"
+    ]
+  }
+}

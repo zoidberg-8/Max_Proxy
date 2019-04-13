@@ -1,0 +1,67 @@
+.shoe {
+  margin: 0 20px 0 0;
+}
+
+.prev {
+  opacity: 0.2;
+  height: 45px;
+  width: 45px;
+  positionz-index: -1;
+  position: absolute;
+  top: 350px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.next {
+  opacity: 0.2;
+  height: 45px;
+  width: 45px;
+  positionz-index: -1;
+  position: absolute;
+  left: 1150px;
+  top: 350px;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.next:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.prev:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.slide-show {
+  position: relative;
+  width: 1200px;
+  margin: 0;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.slide-show-wrapper {
+  position: relative;
+  display: flex;
+  width: 300px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.button-div {
+  padding: 3px;
+}

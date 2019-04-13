@@ -1,0 +1,22 @@
+.shoe {
+  margin: 0 20px 0 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.pic {
+  object-fit: cover;
+  width: 370px;
+  height: 450px;
+}
+
+.crop {
+  max-width: 365px;
+  max-height: 448px;
+  overflow: hidden;
+  text-indent: -2px;
+}
+
+.crop img {
+  max-width: initial;
+}

@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+<link rel = "stylesheet" type="text/css" href="style.css"/>
 </head>
 
 <body>
-<div>
-<div id = 'reviews'>reviews</div>
+
+<div class='maincontainer'>
+
+<div class='mainimagecontainer' id='mainimage'></div>
+
+<div class='nav'>
+<div class='selectorcontainer' id='selector'></div>
+
+<div class = 'describecontainer' id='describe'>describe</div>
+
+<div class = "reviewscontainer" id = 'reviews'>reviews</div>
 
 </div>
+
+<div class = "suggestioncontainer"  id = 'suggestion'>suggestion</div>
+
+</div>
+
+<!-- Max reviews -->
 <script src ='http://localhost:3002/shoes/:id/bundle.js'></script>
 </body>
 
-<!-- Therese reserved spot
-<script src ='http://localhost:3003/shoes/:id/bundle.js'></script>
-</body> -->
+<!-- Hunter Suggestion -->
+<script src ='http://localhost:3003/bundle.js'></script>
+
+<!-- Hunter Product Description -->
+<script src ='http://localhost:3004/bundle.js'></script>
+</body>
+
+<!-- Therese main image -->
+<script src ='http://localhost:3005/bundle.js'></script>
+</body>
+
+<!-- Therese image selector -->
+<script src ='http://localhost:3006/bundle.js'></script>
+</body>
 
 
-<!-- Hunter reserved spot -->
-<!-- <script src ='http://localhost:3004/shoes/:id/bundle.js'></script>
-</body> -->
 
 </html>
