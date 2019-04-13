@@ -39,7 +39,7 @@ app.use(
   proxy({ target: 'http://localhost:3004', changeOrigin: true })
 );
 
-//Therese's service - main image
+//Therese's service - image selector
 app.use(
   '/shoes/:id/mainimage',
   proxy({ target: 'http://localhost:3005', changeOrigin: true })
@@ -53,6 +53,26 @@ app.use(
 app.use(
   '/shoes/:id/prod',
   proxy({ target: 'http://localhost:3005', changeOrigin: true })
+);
+
+//Therese's service - main image
+app.use(
+  '/initial',
+  proxy({ target: 'http://localhost:3006', changeOrigin: true })
+);
+app.use(
+  '/api/main',
+  proxy({ target: 'http://localhost:3006', changeOrigin: true })
+);
+
+app.use(
+  '/initial',
+  proxy({ target: 'http://localhost:3006', changeOrigin: true })
+);
+
+app.use(
+  '/api/main',
+  proxy({ target: 'http://localhost:3006', changeOrigin: true })
 );
 
 
