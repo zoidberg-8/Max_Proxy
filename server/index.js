@@ -34,6 +34,26 @@ app.use(
   proxy({ target: 'http://localhost:3004', changeOrigin: true })
 );
 
+app.use(
+  '/shoes/:id/sizes',
+  proxy({ target: 'http://localhost:3004', changeOrigin: true })
+);
+
+//Therese's service - main image
+app.use(
+  '/shoes/:id/mainimage',
+  proxy({ target: 'http://localhost:3005', changeOrigin: true })
+);
+
+app.use(
+  '/shoes/:id/main',
+  proxy({ target: 'http://localhost:3005', changeOrigin: true })
+);
+
+app.use(
+  '/shoes/:id/prod',
+  proxy({ target: 'http://localhost:3005', changeOrigin: true })
+);
 
 
 var port = 3000;
