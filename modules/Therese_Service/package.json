@@ -1,0 +1,47 @@
+{
+  "name": "therese_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack -d --watch",
+    "start": "nodemon server/index.js -w database -w server",
+    "seed": "mysql -u root < schema.sql && node database/dummy.js",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoidberg-8/Therese_Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoidberg-8/Therese_Service/issues"
+  },
+  "homepage": "https://github.com/zoidberg-8/Therese_Service#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "jquery": "^3.3.1",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
