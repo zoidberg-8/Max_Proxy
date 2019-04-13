@@ -15,7 +15,7 @@
 }
 
 .productContainer {
-  position: absolute;
+  position: relative;
   top: 0px;
   display: inline-block;
   width: 456px;
