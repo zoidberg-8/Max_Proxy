@@ -1,0 +1,25 @@
+.maincontainer{
+  display: grid;
+  grid-template-columns:33.3% 33.3% 33.3%;
+  margin: auto;
+  max-width: 1300px;
+}
+
+.selectorcontainer{
+  grid-column:3/4
+}
+
+.describecontainer{
+  grid-column:3/4;
+  padding-bottom:30px;
+
+}
+
+.reviewscontainer{
+  grid-column:3/4;
+  font-size:23;
+}
+
+.suggestioncontainer{
+  grid-column: 1/4;
+}

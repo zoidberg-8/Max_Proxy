@@ -3,38 +3,37 @@ const mysql = require("mysql");
 
 const connection = mysql.createConnection({
   user: "root",
-  database: "nikesugg"
+  database: "nike"
 });
 
 var newArr = [
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/h9tge6s0brcnq13gz3lq/air-foamposite-pro-mens-shoe-3C44gf.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/gsuin11ptg5qgktmzoat/air-force-1-07-shoe-JkTGzADv.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/acmoik7t1kfbprm8hsqs/vaporfly-4-flyknit-running-shoe-v7G3FB.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/x0jzm5rey88hbkxoynnx/zoom-pegasus-turbo-mens-running-shoe-qCL9h1.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/tkp1tjl7lxw2jzyiwaxr/air-zoom-vomero-14-mens-running-shoe-m4gpHg.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/jsn8jtrvcot4cz8p0ga2/epic-react-flyknit-2-mens-running-shoe-459stf.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/nxxye5nlm181f2bupvol/epic-react-flyknit-2-mens-running-shoe-459stf.jpg",
-  "https://c.static-nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/noogxnzqtzyr1iysm0q5/air-vapormax-flyknit-2-shoe-BPBJRb.jpg"
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.19.54+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.20.01+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.20.13+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.20.23+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.20.35+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.20.54+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.21.02+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.22.20+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.21.02+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.22.20+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.23.03+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.23.32+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.23.58+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.25.05+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.26.51+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.27.14+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.28.04+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.28.48+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.29.25+PM.png",
+  "https://s3.amazonaws.com/shoepics2/nike+pictures/Screen+Shot+2019-04-12+at+6.32.28+PM.png"
 ];
 
-for (var i = 0; i < newArr.length; i++) {
+//write some sort of randomizer
+for (var i = 1; i < 101; i++) {
   connection.query(
-    "insert into suggestions(name, url,price, category, colors, style, shoe_kind) values (?,?,?,?,?,?,?);",
-    [
-      faker.lorem.words(),
-      newArr[i],
-      faker.random.number({
-        min: 100,
-        max: 400
-      }),
-      faker.lorem.words(),
-         faker.random.number({
-        min: 1,
-        max: 10
-      }),
-      faker.lorem.words(),
-      faker.lorem.words()
-    ],
+    `create table Shoe${i} (id int NOT NULL AUTO_INCREMENT, name varchar(50) NOT NULL, url varchar(10000) NOT NULL, price int(5) NOT NULL, category varchar(50) NOT NULL, colors int(2) NOT NULL, style varchar(50) NOT NULL, shoe_kind varchar(50) NOT NULL, PRIMARY KEY (ID)
+);`,
     function(err, result) {
       if (err) {
         console.log(err);
@@ -43,4 +42,33 @@ for (var i = 0; i < newArr.length; i++) {
       }
     }
   );
+
+  for (var j = 0; j < 8; j++) {
+    index = Math.floor(Math.random() * newArr.length);
+    connection.query(
+      `insert into Shoe${i} (name, url,price, category, colors, style, shoe_kind) values (?,?,?,?,?,?,?);`,
+      [
+        faker.lorem.words(),
+        newArr[index],
+        faker.random.number({
+          min: 100,
+          max: 400
+        }),
+        faker.lorem.words(),
+        faker.random.number({
+          min: 1,
+          max: 10
+        }),
+        faker.lorem.words(),
+        faker.lorem.words()
+      ],
+      function(err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log(result);
+        }
+      }
+    );
+  }
 }

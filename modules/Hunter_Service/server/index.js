@@ -16,7 +16,8 @@ app.use("/shoes/", express.static(__dirname + "/../client/dist"));
 app.use(express.static(__dirname + "/../client/dist"));
 
 app.get("/shoes/:id/suggestions", (req, res) => {
-  db.getSuggestions(function(err, result) {
+  var productid = req.params.id;
+  db.getSuggestions(productid, function(err, result) {
     if (err) {
       console.log(err);
     } else {

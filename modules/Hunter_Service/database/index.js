@@ -1,11 +1,11 @@
 const mysql = require("mysql");
 const connection = mysql.createConnection({
   user: "root",
-  database: "nikesugg"
+  database: "nike"
 });
 
-var getSuggestions = function(callback) {
-  connection.query("select * from suggestions", function(err, result) {
+var getSuggestions = function(productid,callback) {
+  connection.query(`select * from shoe${productid}`, function(err, result) {
     if (err) {
       console.log(err);
     } else {

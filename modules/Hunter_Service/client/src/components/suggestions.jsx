@@ -29,20 +29,26 @@ class Suggestions extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.suggest}>
         <h3>
-          <b>YOU MAY ALSO LIKE</b>
+          <b>YOU MAY ALSO LIKE </b>
         </h3>
 
         <div className={styles.slideshow}>
-                <div className={styles.buttoncontainer}>
-          <button className={styles.prev} onClick={this.onPrevClick.bind(this)}>
-            &lt;
-          </button>
-          <button className={styles.next} onClick={this.onNextClick.bind(this)}>
-            &gt;
-          </button>
-        </div>
+          <div className={styles.buttoncontainer}>
+            <button
+              className={styles.prev}
+              onClick={this.onPrevClick.bind(this)}
+            >
+              &lt;
+            </button>
+            <button
+              className={styles.next}
+              onClick={this.onNextClick.bind(this)}
+            >
+              &gt;
+            </button>
+          </div>
           <div
             className={styles.slideshowwrapper}
             style={{
@@ -53,7 +59,6 @@ class Suggestions extends React.Component {
             {this.props.suggests.map(data => (
               <IndividualSuggestion data={data} />
             ))}
-            
           </div>
         </div>
       </div>

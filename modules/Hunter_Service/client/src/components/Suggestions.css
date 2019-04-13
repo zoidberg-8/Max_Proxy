@@ -43,6 +43,8 @@
 }
 
 .slideshow {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
   position: relative;
   width: 1200px;
   margin: 0;
@@ -60,4 +62,9 @@
 
 .buttondiv {
   padding: 3px;
+}
+
+.suggest {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
 }
