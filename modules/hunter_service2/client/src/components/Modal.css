@@ -1,0 +1,46 @@
+.shoe {
+  margin: 0 20px 0 0;
+}
+
+.describebody {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 600;
+}
+
+.closeModal {
+  position: absolute;
+  right: 50px;
+}
+
+.shoepreview {
+  font-size: 23px;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.modalbody {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  position: absolute;
+  right: 200px;
+  left: 200px;
+}
+
+.Modal {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: rgba(255, 255, 255, 255);
+  font-size: 18px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 255);
+}
