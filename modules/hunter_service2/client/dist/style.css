@@ -1,0 +1,105 @@
+.describe {
+  max-width: 500px;
+  margin: 0 10px 0 0;
+}
+.shoe {
+  margin: 0 20px 0 0;
+}
+
+.describe-body {
+  font-family: "futura-pt-condensed", sans-serif;
+  font-weight: 600;
+}
+
+#closeModal {
+  position: absolute;
+  right: 50px;
+}
+
+.shoe-preview {
+  font-size: 23px;
+  top: 50px;
+  left: 50px;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+#modal-body {
+  font-family: "futura-pt-condensed", sans-serif;
+  position: absolute;
+  right: 200px;
+  left: 200px;
+}
+
+.describe {
+  font-size: 23px;
+}
+
+.Modal {
+  background-color: rgba(255, 255, 255, 255);
+  font-size: 18px;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 255);
+}
+
+.size {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.size-button {
+  height: 55px;
+  width: 80px;
+  background-color: white;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.size-button:hover {
+  border-color: black;
+}
+
+.button-div {
+  padding: 3px;
+}
+
+.add-cart {
+  height: 50px;
+  width: 375px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.shopping-buttons {
+  display: flex;
+}
+
+.heart {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.heart:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=100);
+}
+
+.add-cart:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=100);
+}

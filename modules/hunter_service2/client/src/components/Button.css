@@ -1,0 +1,21 @@
+.sizebutton {
+  height: 55px;
+  width: 80px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.sizebutton2 {
+  height: 55px;
+  width: 80px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.sizebutton:hover {
+  border-color: black;
+}
+
+.buttondiv {
+  padding: 3px;
+}
